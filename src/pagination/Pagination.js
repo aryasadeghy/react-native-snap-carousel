@@ -1,8 +1,5 @@
 import React, { PureComponent } from "react";
 import { I18nManager, Platform, View } from "react-native";
-import { ViewPropTypes } from "deprecated-react-native-prop-types";
-
-import PropTypes from "prop-types";
 import PaginationDot from "./PaginationDot";
 import styles from "./Pagination.style";
 
@@ -10,45 +7,7 @@ const IS_IOS = Platform.OS === "ios";
 const IS_RTL = I18nManager.isRTL;
 
 export default class Pagination extends PureComponent {
-  static propTypes = {
-    activeDotIndex: PropTypes.number.isRequired,
-    dotsLength: PropTypes.number.isRequired,
-    activeOpacity: PropTypes.number,
-    carouselRef: PropTypes.object,
-    containerStyle: ViewPropTypes ? ViewPropTypes.style : View.propTypes.style,
-    dotColor: PropTypes.string,
-    dotContainerStyle: ViewPropTypes
-      ? ViewPropTypes.style
-      : View.propTypes.style,
-    dotElement: PropTypes.element,
-    dotStyle: ViewPropTypes ? ViewPropTypes.style : View.propTypes.style,
-    inactiveDotColor: PropTypes.string,
-    inactiveDotElement: PropTypes.element,
-    inactiveDotOpacity: PropTypes.number,
-    inactiveDotScale: PropTypes.number,
-    inactiveDotStyle: ViewPropTypes
-      ? ViewPropTypes.style
-      : View.propTypes.style,
-    renderDots: PropTypes.func,
-    tappableDots: PropTypes.bool,
-    vertical: PropTypes.bool,
-    accessibilityLabel: PropTypes.string,
-    animatedDuration: PropTypes.number,
-    animatedFriction: PropTypes.number,
-    animatedTension: PropTypes.number,
-    delayPressInDot: PropTypes.number,
-  };
-
-  static defaultProps = {
-    inactiveDotOpacity: 0.5,
-    inactiveDotScale: 0.5,
-    tappableDots: false,
-    vertical: false,
-    animatedDuration: 250,
-    animatedFriction: 4,
-    animatedTension: 50,
-    delayPressInDot: 0,
-  };
+  
 
   constructor(props) {
     super(props);
